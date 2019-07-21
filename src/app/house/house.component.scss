@@ -1,0 +1,11 @@
+.house-card {
+  &__content {
+    margin: 4px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  &__description {
+    padding: 20px;
+  }
+}

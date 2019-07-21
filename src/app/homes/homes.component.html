@@ -1,0 +1,5 @@
+<div class="houses-wrap">
+  <div class="house-card" *ngFor="let house of homes">
+    <app-house [house]="house" (details)="goToHouse($event)"></app-house>
+  </div>
+</div>
