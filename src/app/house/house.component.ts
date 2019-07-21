@@ -14,4 +14,10 @@ export class HouseComponent {
   // ngOnInit() {
   // }
 
+  onDetailsClick(house: House) {
+    if (this.details) {
+      this.details.emit(house);
+    }
+  }
+
 }

@@ -27,9 +27,8 @@ export class HomesComponent implements OnInit {
     this.homes = mockHomes;
   }
 
-  goToHouse(house) {
+  onDetailsHouse(house) {
     this.houseService.setSelectedHouse(house);
-    this.router.navigate(['details']);
+    this.router.navigate(['details', house.id]);
   }
-
 }

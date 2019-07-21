@@ -2,8 +2,9 @@
     <img src="/assets/room.jpeg" alt="">
     <div class="house-card__description">
       <h2>{{house.name}} Details</h2>
-      <!-- <div><span>country: </span>{{house.country}}</div>
-      <div><span>phone: </span>{{house.phone}}</div> -->
       <div><span>Description:</span>{{house.description}}</div>
+      <button mat-raised-button color="primary" (click)="onDetailsClick(house)">
+          DETAILS
+        </button>
     </div>
   </div>
