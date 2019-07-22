@@ -1,0 +1,53 @@
+<!-- <form [formGroup]="houseForm" action="">
+  <label for="name">Add a title for your house</label><br>
+  <input type="text" name="name" formControlName="name">
+  <br>
+  <label for="description">Add a description for your house</label><br>
+  <textarea formControlName="description" name="" id="" cols="30" rows="10"></textarea>
+  <br>
+  <button (click)="saveHouse()">Save</button>
+</form> -->
+<div class="house-container">
+  <!-- <div class="house-gallery">
+    <carousel>
+      <slide>
+        <img src="http://placehold.it/2000x1000" alt="first slide" style="display: block; width: 100%;">
+      </slide>
+      <slide>
+        <img src="http://placehold.it/2000x1000" alt="second slide" style="display: block; width: 100%;">
+      </slide>
+      <slide>
+        <img src="http://placehold.it/2000x1000" alt="third slide" style="display: block; width: 100%;">
+      </slide>
+    </carousel>
+  </div> -->
+  <form [formGroup]="houseForm" class="house-form">
+    <mat-form-field appearance="outline">
+      <mat-label>Title</mat-label>
+      <input formControlName="name" matInput>
+      <mat-hint>Make sure it's descriptive</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <textarea formControlName="description" matInput></textarea>
+      <mat-hint>Let's flower it up</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Amenities</mat-label>
+      <mat-select formControlName="amenities" multiple>
+        <mat-option *ngFor="let amenity of amenities" [value]="amenity">{{amenity}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <input formControlName="files" type="file" multiple="multiple">
+    <input 
+      formControlName="availabilityRanges"
+      type="text"
+      placeholder="Daterangepicker"
+      class="form-control"
+      [bsConfig]="{containerClass: 'theme-orange'}"
+      bsDaterangepicker>
+    <button (click)="saveHouse()">Save</button>
+  </form>
+</div>

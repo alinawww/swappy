@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { HouseService } from '../core/services/house.service';
 import { mockHomes } from '../core/mockData/homes';
 import { House } from '../core/models/house';
+import { StorageService } from '../core/services/storage.service';
 
 @Component({
   selector: 'app-homes',
@@ -11,20 +12,26 @@ import { House } from '../core/models/house';
   styleUrls: ['./homes.component.scss']
 })
 export class HomesComponent implements OnInit {
-  homes: House[] = [];
+  homes: House[];
   constructor(
     private houseService: HouseService,
-    private router: Router
-    ) { }
+    private router: Router,
+    private storageService: StorageService
+    ) {}
 
   ngOnInit() {
     this.getHomes();
   }
 
   getHomes() {
+    //TODO Add proper subscription to get homes
     // this.houseService.getHomes()
     //   .subscribe(homes => this.homes = homes);
-    this.homes = mockHomes;
+
+    this.homes = this.storageService.getItem('homes');
+    if (!this.homes) {
+      this.storageService.setItem('homes', mockHomes);
+    }
   }
 
   onDetailsHouse(house) {
@@ -32,3 +39,4 @@ export class HomesComponent implements OnInit {
     this.router.navigate(['details', house.id]);
   }
 }
+

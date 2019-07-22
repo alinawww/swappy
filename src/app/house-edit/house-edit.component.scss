@@ -1,0 +1,17 @@
+.house-form {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 50%;
+  & > * {
+    width: 100%;
+  }
+}
+
+.house-container {
+  display: flex;
+}
+
+.house-gallery {
+  flex: 0 0 50%;
+  margin-right: 12px;
+}

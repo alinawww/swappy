@@ -9,4 +9,6 @@ export interface House {
   available?: string;
   positiveReviews?: string;
   negativeReviews?: string;
+  amenities: Array<string>;
+  dateRanges: Array<Object>;
 }

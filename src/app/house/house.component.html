@@ -1,10 +1,7 @@
-<div class="house-card__content">
-    <img src="/assets/room.jpeg" alt="">
-    <div class="house-card__description">
-      <h2>{{house.name}} Details</h2>
-      <div><span>Description:</span>{{house.description}}</div>
-      <button mat-raised-button color="primary" (click)="onDetailsClick(house)">
-          DETAILS
-        </button>
-    </div>
+<mat-card class="house-card__content" (click)="onDetailsClick(house)">
+  <img src="/assets/room.jpeg" alt="">
+  <div class="house-card__description">
+    <h2>{{house.name}} Details</h2>
+    <div><span>Description:</span>{{house.description}}</div>
   </div>
+</mat-card>
