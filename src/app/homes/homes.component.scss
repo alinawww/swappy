@@ -11,3 +11,17 @@
     cursor: pointer;
   }
 }
+
+.filters {
+  display: flex;
+  display: flex;
+  margin: 0 42px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #fff;
+  input {
+    width: 200px;
+    border-radius: 100px;
+    border: 0;
+    margin-right: 20px;
+  }
+}

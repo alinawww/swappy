@@ -1,4 +1,11 @@
 <app-header></app-header>
+<div class="filters">
+  <input type="text" placeholder="Dates" class="form-control" bsDaterangepicker [formControl]="datesFilter"
+    [(ngModel)]="selectedDates" (ngModelChange)="updateDatesFilter()" [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD' }">
+
+  <input type="text" placeholder="Location" class="form-control" [formControl]="cityFilter"
+  [(ngModel)]="selectedCity" (ngModelChange)="updateCityFilter()">
+</div>
 <div class="houses-wrap">
   <div class="house-card" *ngFor="let house of homes">
     <app-house [house]="house" (details)="onDetailsHouse($event)"></app-house>

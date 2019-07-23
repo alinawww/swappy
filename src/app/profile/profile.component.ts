@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { mockHomes } from '../core/mockData/homes';
+// import { mockHomes } from '../core/mockData/homes';
 import { House } from '../core/models/house';
 import { AuthService } from '../core/services/authService';
 
@@ -21,7 +21,7 @@ export class ProfileComponent implements OnInit {
   }
 
   findUserProperty() {
-    this.property = mockHomes.find(home => home.userId === 123);
+    // this.property = mockHomes.find(home => home.userId === 123);
   }
 
   onAddHouse(house) {

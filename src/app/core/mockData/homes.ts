@@ -57,7 +57,7 @@ export const mockHomes = [
         name: 'Pool'
       }
     ],
-    dateRanges: []
+    availabilities: []
   },
   {
     id: 2,
@@ -66,7 +66,7 @@ export const mockHomes = [
     userId: 111,
     description: 'I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant rolling and swaying of both. But this was not the only jamming jeopardy he was exposed to. Unappalled by the massacre made upon them during the night, the sharks now freshly and more keenly allured by the before pent blood which began to flow from the carcass—the rabid creatures swarmed round it like bees in a beehive.',
     amenities: [],
-    dateRanges: []
+    availabilities: []
   },
   {
     id: 3,
@@ -75,7 +75,7 @@ export const mockHomes = [
     userId: 111,
     description: 'I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant rolling and swaying of both. But this was not the only jamming jeopardy he was exposed to. Unappalled by the massacre made upon them during the night, the sharks now freshly and more keenly allured by the before pent blood which began to flow from the carcass—the rabid creatures swarmed round it like bees in a beehive.',
     amenities: [],
-    dateRanges: []
+    availabilities: []
   },
   {
     id: 4,
@@ -84,7 +84,7 @@ export const mockHomes = [
     userId: 111,
     description: 'I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant rolling and swaying of both. But this was not the only jamming jeopardy he was exposed to. Unappalled by the massacre made upon them during the night, the sharks now freshly and more keenly allured by the before pent blood which began to flow from the carcass—the rabid creatures swarmed round it like bees in a beehive.',
     amenities: [],
-    dateRanges: []
+    availabilities: []
   },
   {
     id: 5,
@@ -93,7 +93,7 @@ export const mockHomes = [
     userId: 111,
     description: 'I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant rolling and swaying of both. But this was not the only jamming jeopardy he was exposed to. Unappalled by the massacre made upon them during the night, the sharks now freshly and more keenly allured by the before pent blood which began to flow from the carcass—the rabid creatures swarmed round it like bees in a beehive.',
     amenities: [],
-    dateRanges: []
+    availabilities: []
   },
   {
     id: 6,
@@ -102,7 +102,7 @@ export const mockHomes = [
     userId: 111,
     description: 'I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant rolling and swaying of both. But this was not the only jamming jeopardy he was exposed to. Unappalled by the massacre made upon them during the night, the sharks now freshly and more keenly allured by the before pent blood which began to flow from the carcass—the rabid creatures swarmed round it like bees in a beehive.',
     amenities: [],
-    dateRanges: []
+    availabilities: []
   },
   {
     id: 7,
@@ -111,7 +111,7 @@ export const mockHomes = [
     userId: 111,
     description: 'I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant rolling and swaying of both. But this was not the only jamming jeopardy he was exposed to. Unappalled by the massacre made upon them during the night, the sharks now freshly and more keenly allured by the before pent blood which began to flow from the carcass—the rabid creatures swarmed round it like bees in a beehive.',
     amenities: [],
-    dateRanges: []
+    availabilities: []
   },
   {
     id: 8,
@@ -120,6 +120,6 @@ export const mockHomes = [
     userId: 111,
     description: 'I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant rolling and swaying of both. But this was not the only jamming jeopardy he was exposed to. Unappalled by the massacre made upon them during the night, the sharks now freshly and more keenly allured by the before pent blood which began to flow from the carcass—the rabid creatures swarmed round it like bees in a beehive.',
     amenities: [],
-    dateRanges: []
+    availabilities: []
   },
 ];

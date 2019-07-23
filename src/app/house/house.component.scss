@@ -8,6 +8,10 @@
   &__description {
     padding: 20px;
   }
+  &__short-description {
+    font-size: 14px;
+    color: #646669;
+  }
   &__availability-badge {
     width: 8px;
     height: 8px;
@@ -18,6 +22,15 @@
     border-radius: 50%;
     &.available {
       background: #6eaf2c;
+    }
+  }
+  &__city {
+    font-size: 14px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    i {
+      font-size: 20px;
     }
   }
 }
