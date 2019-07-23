@@ -1,10 +1,33 @@
 header {
   display: flex;
   justify-content: space-between;
+  padding: 42px;
 }
 
 .profile {
-  display: flex;
-  align-items: center;
-  background: lightgray;
+  &__user {
+    display: flex;
+    align-items: center;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__name {
+    margin: 0;
+    font-weight: 600;
+  }
+  &__image {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 12px;
+    justify-content: center;
+  }
 }

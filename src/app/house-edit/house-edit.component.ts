@@ -43,7 +43,7 @@ export class HouseEditComponent implements OnInit, OnChanges {
     //   switchMap((params: ParamMap) => mockHomes.find(home => home.id.toString() === params.get('id'))
     //   catch((error: any) => log.error));
     // console.log('test', test);
-    this.selectedHouse = mockHomes.find(home => home.id.toString() === '1');
+    // this.selectedHouse = mockHomes.find(home => home.id.toString() === '1');
     // console.log(this.route.paramMap.pipe(map(params => params.keys)));
     // this.selectedHouse = this.route.paramMap.pipe(
     //   switchMap(params => {

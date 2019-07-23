@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
-import { LoginResponse } from '../models/loginResponse';
+import { AuthResponse } from '../models/authResponse';
 import { StorageService } from './storage.service';
 import { User } from '../models/user';
 
@@ -11,43 +11,43 @@ import { User } from '../models/user';
 })
 export class AuthService {
   private authUrl = 'http://5c505db9ee97f600140480dd.mockapi.io/auth';
-  private loginResponse: LoginResponse;
+  private authResponse: AuthResponse;
 
   constructor(
     private http: HttpClient,
     private storageService: StorageService
   ) {
-    // this.loginResponse = storageService.getItem('loginResponse');
+    this.authResponse = storageService.getItem('authResponse');
   }
 
-  login(username: string, password: string): Observable<LoginResponse> {
+  login(username: string, password: string): Observable<AuthResponse> {
     return this.http
-      .post<LoginResponse>(this.authUrl, { username, password })
+      .post<AuthResponse>(this.authUrl, { username, password })
       .pipe(
-        map(loginResponse => {
-          this.handleLoginSuccess(loginResponse);
-          return loginResponse;
+        map(authResponse => {
+          this.handleLoginSuccess(authResponse);
+          return authResponse;
         }),
         catchError(this.handleLoginError)
       );
   }
 
   logout(): void {
-    this.loginResponse = null;
-    this.storageService.removeItem('loginResponse');
+    this.authResponse = null;
+    this.storageService.removeItem('authResponse');
   }
 
   isLoggedIn(): boolean {
-    return this.loginResponse ? true : false;
+    return this.authResponse ? true : false;
   }
 
   getUser(): User {
-    return this.loginResponse.user;
+    return this.authResponse.user;
   }
 
-  private handleLoginSuccess(loginResponse: LoginResponse) {
-    this.loginResponse = loginResponse;
-    this.storageService.setItem('loginResponse', loginResponse);
+  private handleLoginSuccess(authResponse: AuthResponse) {
+    this.authResponse = authResponse;
+    this.storageService.setItem('authResponse', authResponse);
   }
 
   private handleLoginError(error: HttpErrorResponse) {

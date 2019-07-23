@@ -2,6 +2,7 @@ export interface House {
   id: number;
   name: string;
   description: string;
+  short_description?: string;
   createdAt?: string;
   image?: string;
   latitude?: string;
@@ -9,6 +10,6 @@ export interface House {
   available?: string;
   positiveReviews?: string;
   negativeReviews?: string;
-  amenities: Array<string>;
+  amenities: Array<Object>;
   dateRanges: Array<Object>;
 }

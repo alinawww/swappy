@@ -1,14 +1,14 @@
 <header>
   <div class="logo" routerLink="/homes" routerLinkActive="active"> 
-    <img src="http://placehold.it/100x100" alt="">
+    <img src="/assets/images/HouseSwap.svg" alt="logo">
   </div>
   <div class="profile">
-    <a class="profile__name" routerLink="/profile" routerLinkActive="active">User Name</a>
-    <!-- <mat-icon aria-hidden="false" aria-label="profile icon">home</mat-icon> -->
-    <!-- <button *ngIf="!authService.isLoggedIn()" (click)="openLoginDialog()">Login</button> -->
-    <!-- <div *ngIf="authService.isLoggedIn()">
-      <p>{{authService.getUser().firstName + ' ' + authService.getUser().lastName}}</p>
-      <button click)="logout()">Logout</button>
-    </div> -->
+    <button *ngIf="!authService.isLoggedIn()" (click)="openLoginDialog()">Login</button>
+    <div class="profile__user" *ngIf="authService.isLoggedIn()" routerLink="/profile" routerLinkActive="active">
+      <p class="profile__name">{{authService.getUser().firstname + ' ' + authService.getUser().lastname}}</p>
+      <div class="profile__image">
+        <i class="large material-icons">person</i>
+      </div>
+    </div>
   </div>
 </header>

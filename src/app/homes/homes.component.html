@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div class="houses-wrap">
   <div class="house-card" *ngFor="let house of homes">
     <app-house [house]="house" (details)="onDetailsHouse($event)"></app-house>

@@ -2,8 +2,12 @@
 .houses-wrap {
   display: flex;
   flex-wrap: wrap;
+  padding: 34px;
 }
 
 .house-card {
   flex: 0 0 calc(100%/3);
+  &:hover {
+    cursor: pointer;
+  }
 }

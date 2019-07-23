@@ -1,7 +1,9 @@
 <mat-card class="house-card__content" (click)="onDetailsClick(house)">
-  <img src="/assets/room.jpeg" alt="">
+  <span class="house-card__availability-badge" [class.available]="house.is_available"></span>
+  <img src="/assets/images/room.jpeg" alt="">
   <div class="house-card__description">
-    <h2>{{house.name}} Details</h2>
-    <div><span>Description:</span>{{house.description}}</div>
+    <h2>{{house.name}}</h2>
+    <div>Palo Alto, CA</div>
+    <div>{{house.short_description}}</div>
   </div>
 </mat-card>

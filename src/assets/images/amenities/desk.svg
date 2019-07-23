@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>desk</title>
+    <desc>Created with Sketch.</desc>
+    <g id="desk--Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="desk--Artboard" transform="translate(-226.000000, -70.000000)">
+            <g id="desk--2.-Hotel-/-Filled-/-Amenities-/-Desk" transform="translate(224.000000, 68.000000)">
+                <rect id="desk--Guide" fill-opacity="0" fill="#F2F2F2" x="0" y="0" width="24" height="24"></rect>
+                <path d="M20,12.25 L20,22 L18.5,22 L18.5,18 L5.5,18 L5.5,22 L4,22 L4,12.25 L3,12.25 C2.58578644,12.25 2.25,11.9142136 2.25,11.5 C2.25,11.0857864 2.58578644,10.75 3,10.75 L21,10.75 C21.4142136,10.75 21.75,11.0857864 21.75,11.5 C21.75,11.9142136 21.4142136,12.25 21,12.25 L20,12.25 Z M10.75,13.75 C10.3357864,13.75 10,14.0857864 10,14.5 C10,14.9142136 10.3357864,15.25 10.75,15.25 L13.25,15.25 C13.6642136,15.25 14,14.9142136 14,14.5 C14,14.0857864 13.6642136,13.75 13.25,13.75 L10.75,13.75 Z M6.5,2 L17.5,2 C17.7761424,2 18,2.22385763 18,2.5 L18,8.75 C18,9.02614237 17.7761424,9.25 17.5,9.25 L6.5,9.25 C6.22385763,9.25 6,9.02614237 6,8.75 L6,2.5 C6,2.22385763 6.22385763,2 6.5,2 Z" id="desk--Desk" fill="#646669"></path>
+            </g>
+        </g>
+    </g>
+</svg>

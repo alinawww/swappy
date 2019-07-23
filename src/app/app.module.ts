@@ -16,6 +16,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { AvailabilityCalendarComponent } from './availability-calendar/availability-calendar.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     HouseDetailsComponent,
     HouseEditComponent,
     ProfileComponent,
-    AvailabilityCalendarComponent
+    AvailabilityCalendarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     BsDatepickerModule.forRoot()
   ],
   providers: [],
+  entryComponents: [LoginComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

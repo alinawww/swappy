@@ -1,3 +1,82 @@
+<div class="details-nav">
+  <button mat-button class="details-nav__button" [routerLink]="['/homes']" routerLinkActive="router-link-active">
+    <i class="large material-icons">arrow_back</i>&nbsp;Back</button>
+</div>
 <div *ngIf="house">
-  <p>{{house.id}}</p>
+  <div class="house-images photos">
+    <div class="photos__large">
+      <div class="house-images__main-photo" style="background: url('http://placehold.it/600x1000') center; background-size: cover"></div>
+    </div>
+    <div class="house-images__all-photos">
+      <div class="photos__small">
+        <div class="photos__image-wrap" style="background: url('http://placehold.it/228x181') center; background-size: cover"></div>
+      </div>
+      <div class="photos__small">
+        <div class="photos__image-wrap" style="background: url('http://placehold.it/228x181') center; background-size: cover"></div>
+      </div>
+      <div class="photos__small">
+        <div class="photos__image-wrap" style="background: url('http://placehold.it/228x181') center; background-size: cover"></div>
+      </div>
+      <div class="photos__small">
+        <div class="photos__image-wrap" style="background: url('http://placehold.it/228x181') center; background-size: cover"></div>
+      </div>
+      <div class="photos__small">
+        <div class="photos__image-wrap" style="background: url('http://placehold.it/228x181') center; background-size: cover"></div>
+      </div>
+      <div class="photos__small">
+        <div class="photos__image-wrap" style="background: url('http://placehold.it/228x181') center; background-size: cover"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section__wide">
+      <div class="house-details">
+        <h2 class="house-details__title">{{house.name}}</h2>
+        <p class="house-details__city"><i class="large material-icons">location_on</i>&nbsp;Palo Alto, CA</p>
+        <p class="house-details__description">{{house.description}}</p>
+        <p class="house-details__description">{{house.short_description}}</p>
+      </div>
+    </div>
+    <div class="section__narrow">
+      <div class="house-contact">
+        <h3 class="house-contact__title">Host</h3>
+        <div class="host">
+          <div class="host__image">
+            <img src="http://placehold.it/44x44" alt="">
+          </div>
+          <div class="host__details">
+            <h4 class="host__name">Hannah Blake</h4>
+            <p class="host__email">h.blake@tripactions.com</p>
+          </div>
+        </div>
+        <h3 class="house-contact__title">Contact details</h3>
+        <div class="contact-details">
+          <div class="contact">
+            <div class="contact__image">
+              <img src="/assets/images/Slack_Mark.svg" alt="">
+            </div>
+            <p class="contact__slack">h.blake</p>
+          </div>
+        </div>
+        <button mat-flat-button color="primary">Contact the host via Slack</button>
+      </div>
+    </div>
+  </div>
+  <div class="section section--highlight house-details">
+    <div class="section__wide">
+      <h3 class="house-details__subtitle">Amenities</h3>
+      <mat-card>
+        <div class="amenities">
+          <div class="amenities__item" *ngFor="let amenity of house.amenities">
+            <img class="amenities__image" [src]="'/assets/images/amenities/' + amenity.icon + '.svg'" alt="">
+            <p class="amenities__name">{{amenity.name}}</p>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+    <div class="section__narrow">
+        <img src="http://placehold.it/380x300" alt="">
+    </div>
+  </div>
 </div>

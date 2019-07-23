@@ -1,13 +1,18 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/theming';
+$custom-typography: mat-typography-config(
+    $font-family: 'Larsseit'
+);
+
+@include mat-core($custom-typography);
 * {
   box-sizing: border-box;
 }
 body {
-  background: #f1f1f1;
-  font-family: sans-serif;
+  background: #edeff2;
   line-height: 1.5;
   color: #303030;
-  font-family: 'Larsseit'
+  font-family: 'Larsseit';
 }
 
 img {
@@ -21,4 +26,29 @@ h2 {
 
 .mat-card {
   padding: 0!important;
+}
+
+.section {
+  display: flex;
+  padding: 32px;
+  &--highlight {
+    background: #edeff2;
+  }
+}
+.section__wide {
+  flex: 0 0 60%;
+  border-right: 1px solid #edeff2;
+  padding: 0 32px;
+}
+
+.section__narrow {
+  flex: 0 0 40%;
+  padding: 0 32px;
+}
+
+.mat-card {
+  border-radius: 10px;
+}
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
 }

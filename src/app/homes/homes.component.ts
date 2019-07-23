@@ -25,18 +25,17 @@ export class HomesComponent implements OnInit {
 
   getHomes() {
     //TODO Add proper subscription to get homes
-    // this.houseService.getHomes()
-    //   .subscribe(homes => this.homes = homes);
+    this.houseService.getHomes()
+      .subscribe(homes => this.homes = homes);
 
-    this.homes = this.storageService.getItem('homes');
-    if (!this.homes) {
-      this.storageService.setItem('homes', mockHomes);
-    }
+    // this.homes = this.storageService.getItem('homes');
+    // if (!this.homes) {
+    //   this.storageService.setItem('homes', mockHomes);
+    // }
   }
 
   onDetailsHouse(house) {
     this.houseService.setSelectedHouse(house);
-    this.router.navigate(['details', house.id]);
+    this.router.navigate(['details', house.accomodation_id]);
   }
 }
-

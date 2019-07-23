@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="18px" viewBox="0 0 19 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>parking</title>
+    <desc>Created with Sketch.</desc>
+    <g id="parking--Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="parking--Artboard" transform="translate(-172.000000, -116.000000)">
+            <g id="parking--2.-Hotel-/-Filled-/-Amenities-/-Parking" transform="translate(169.500000, 113.000000)">
+                <rect id="parking--Guide" fill-opacity="0" fill="#F2F2F2" x="0" y="0" width="24" height="24"></rect>
+                <path d="M5,3 L19,3 C20.1045695,3 21,3.8954305 21,5 L21,19 C21,20.1045695 20.1045695,21 19,21 L5,21 C3.8954305,21 3,20.1045695 3,19 L3,5 C3,3.8954305 3.8954305,3 5,3 Z M9.75,13.75 L12,13.75 C13.7949254,13.75 15.25,12.2949254 15.25,10.5 C15.25,8.70507456 13.7949254,7.25 12,7.25 L8.25,7.25 L8.25,16.75 L9.75,16.75 L9.75,13.75 Z M9.75,12.25 L9.75,8.75 L12,8.75 C12.9664983,8.75 13.75,9.53350169 13.75,10.5 C13.75,11.4664983 12.9664983,12.25 12,12.25 L9.75,12.25 Z" id="parking--Parking" fill="#646669"></path>
+            </g>
+        </g>
+    </g>
+</svg>

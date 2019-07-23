@@ -17,12 +17,12 @@ export class HouseService {
 
   constructor(private http: HttpClient) {}
 
-  // findHotels(): Observable<Hotel[]> {
-  //   return this.http.get<Hotel[]>(this.hotelsUrl).pipe(
-  //     map(hotels => hotels),
-  //     catchError(this.handleError)
-  //   );
-  // }
+  getHomes(): Observable<House[]> {
+    return this.http.get<House[]>('http://localhost:5000/accommodation').pipe(
+      map(homes => homes),
+      catchError(this.handleError)
+    );
+  }
 
   // bookHotel(hotel: Hotel): Observable<BookResponse> {
   //   return this.http.post<BookResponse>(this.bookingUrl, {}).pipe(

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="67px" height="34px" viewBox="0 0 67 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>HouseSwap</title>
+    <desc>Created with Sketch.</desc>
+    <g id="HouseSwap--Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HouseSwap--Listing-page" transform="translate(-48.000000, -38.000000)">
+            <g id="HouseSwap--HouseSwap" transform="translate(48.000000, 38.000000)">
+                <polygon id="HouseSwap--square" fill="#F04923" points="34 33.2054563 66.1042857 33.2054563 66.1042857 17 50.0521429 -2.50149812e-13 34 16.9995049"></polygon>
+                <path d="M17.1104511,33.9990097 C7.80180451,33.9990097 0.255639098,26.3881262 0.255639098,16.9995049 C0.255639098,7.6108835 7.80180451,0 17.1104511,0 C26.4190977,0 33.9652632,7.6108835 33.9652632,16.9995049 C33.9652632,26.3881262 26.4190977,33.9990097 17.1104511,33.9990097" id="HouseSwap--circle" fill="#00ABF2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

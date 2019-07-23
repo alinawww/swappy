@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="16px" viewBox="0 0 22 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>iron</title>
+    <desc>Created with Sketch.</desc>
+    <g id="iron--Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iron--Artboard" transform="translate(-170.000000, -72.000000)">
+            <g id="iron--2.-Hotel-/-Filled-/-Amenities-/-Iron" transform="translate(169.000000, 68.000000)">
+                <rect id="iron--Guide" fill-opacity="0" fill="#F2F2F2" x="0" y="0" width="24" height="24"></rect>
+                <path d="M18.2919879,9.565 L17.7858194,7.73193626 C17.5950259,7.04098687 16.9855106,6.57 16.2981733,6.57 L9.59207481,6.57 L9.59207481,4.32 L16.2981733,4.32 C18.0041963,4.32 19.4962414,5.47293857 19.9546524,7.13305102 L22.0076048,14.5677154 C22.2373229,15.3996281 21.7598483,16.2693768 20.9262868,16.5091265 C20.785916,16.5495001 20.6405918,16.57 20.4945112,16.57 L5.94,16.57 L5.94,16.565 L1.94,16.565 C3.1238248,12.4216132 6.91092257,9.565 11.2201099,9.565 L18.2919879,9.565 Z M2.69,18.175 L19.19,18.175 C19.6042136,18.175 19.94,18.5107864 19.94,18.925 C19.94,19.3392136 19.6042136,19.675 19.19,19.675 L2.69,19.675 C2.27578644,19.675 1.94,19.3392136 1.94,18.925 C1.94,18.5107864 2.27578644,18.175 2.69,18.175 Z" id="iron--Iron" fill="#646669"></path>
+            </g>
+        </g>
+    </g>
+</svg>

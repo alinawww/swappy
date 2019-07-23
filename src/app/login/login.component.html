@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Login</h1>
+<div novalidate>
+  <form [formGroup]="formGroup" autocomplete="off" class="form">
+    <mat-form-field class="form-element">
+      <input matInput placeholder="Username" formControlName="username" />
+      <mat-error *ngIf="
+          !formGroup.controls['username'].valid &&
+          formGroup.controls['username'].touched
+        ">
+        Please enter your username
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-element">
+      <input matInput placeholder="Password" type="password" formControlName="password" autocomplete="current-password" />
+      <mat-error *ngIf="
+          !formGroup.controls['password'].valid &&
+          formGroup.controls['password'].touched
+        ">
+        Please enter your password
+      </mat-error>
+    </mat-form-field>
+
+    <div class="form-element actions-container">
+      <button mat-button (click)="onCancelClick()">Cancel</button>
+      <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid" (click)="onLoginClick()">
+        Login
+      </button>
+    </div>
+  </form>
+</div>

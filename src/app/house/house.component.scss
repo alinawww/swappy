@@ -8,4 +8,16 @@
   &__description {
     padding: 20px;
   }
+  &__availability-badge {
+    width: 8px;
+    height: 8px;
+    background: #f04923;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 50%;
+    &.available {
+      background: #6eaf2c;
+    }
+  }
 }
