@@ -1,4 +1,38 @@
-
-<app-house *ngIf="property" [house]="property"></app-house>
-<button (click)="onAddHouse($event)">Add your house</button>
-<button (click)="onEditHouse($event)">Edit your house</button>
+<div class="section">
+  <div class="profile-card" *ngIf="currentUser">
+    <div class="profile-card__image">
+      <img src="http://placehold.it/150x150" alt="">
+    </div>
+    <div class="profile-card__info">
+      <h2 class="profile-name">{{currentUser.first_name}} {{currentUser.last_name}}</h2>
+      <p class="profile-email">{{currentUser.email}}</p>
+      <p class="profile-slack">
+        <img src="/assets/images/Slack_Mark.svg" alt="">
+        {{currentUser.slack_handle}}</p>
+      <p class="profile-city"><i class="material-icons">location_on</i>&nbsp;{{currentUser.city}}</p>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <div class="section-simple">
+    <h2 class="section__title">Your listings</h2>
+    <ng-container *ngFor="let accommodation of properties">
+      <mat-card>
+        <div class="listing-card">
+          <div class="listing-card__images">images</div>
+          <div class="listing-card__info">
+            <h3 class="listing-card__title">{{accommodation.name}}</h3>
+            <p><i class="material-icons">location_on</i>&nbsp;{{accommodation.city}}</p>
+            <div class="listing-card__availability">
+              
+            </div>
+          </div>
+        </div>
+      </mat-card>
+      
+      <!-- <button (click)="onEditHouse(accommodation.accomodation_id)">Edit your house</button> -->
+    </ng-container>
+    
+    <button mat-stroked-button class="add-listing-btn" (click)="onAddHouse($event)">Add your house</button>
+  </div>
+</div>

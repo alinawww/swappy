@@ -5,7 +5,7 @@
   <div class="profile">
     <button *ngIf="!authService.isLoggedIn()" (click)="openLoginDialog()">Login</button>
     <div class="profile__user" *ngIf="authService.isLoggedIn()" routerLink="/profile" routerLinkActive="active">
-      <p class="profile__name">{{authService.getUser().firstname + ' ' + authService.getUser().lastname}}</p>
+      <p class="profile__name">{{authService.getUser().firstName + ' ' + authService.getUser().lastName}}</p>
       <div class="profile__image">
         <i class="large material-icons">person</i>
       </div>

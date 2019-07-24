@@ -24,12 +24,12 @@ export class HouseService {
     );
   }
 
-  // bookHotel(hotel: Hotel): Observable<BookResponse> {
-  //   return this.http.post<BookResponse>(this.bookingUrl, {}).pipe(
-  //     map(bookResponse => bookResponse),
-  //     catchError(this.handleError)
-  //   );
-  // }
+  addHome(userId, home):  Observable<House[]> {
+    return this.http.post<House[]>(`http://localhost:5000/people/${userId}/accommodation`, home).pipe(
+      map(house => house),
+      catchError(this.handleError)
+    );
+  }
 
   setSelectedHouse(house: House) {
     this.selectedHouse = house;

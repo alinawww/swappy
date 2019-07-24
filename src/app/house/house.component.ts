@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, OnChanges } from '@angular/core';
 import { House } from '../core/models/house';
 
 @Component({
@@ -9,10 +9,8 @@ import { House } from '../core/models/house';
 export class HouseComponent {
   @Input() house: House;
   @Output() details = new EventEmitter<House>();
+  loaded = false;
   constructor() { }
-
-  // ngOnInit() {
-  // }
 
   onDetailsClick(house: House) {
     if (this.details) {

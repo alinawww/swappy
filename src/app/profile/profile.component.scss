@@ -1,0 +1,73 @@
+.profile-card {
+  display: flex;
+  max-width: 400px;
+  margin: 0 auto;
+  align-items: center;
+  &__image {
+    img {
+      border-radius: 50%;
+      border: 2px solid #fff;
+      margin-right: 24px;
+    }
+  }
+  &__info {
+    p {
+      margin: 0;
+    }
+  }
+  .profile-name {
+    font-size: 32px;
+  }
+  .profile-email {
+    font-size: 18px;
+    color: #646669;
+  }
+  .profile-slack {
+    font-size: 16px;
+    color: #646669;
+    img {
+      width: 44px;
+      height: 44px;
+    }
+  }
+  .profile-city {
+    i {
+      padding: 0 10px;
+    }
+  }
+}
+
+.section__title {
+  font-size: 24px;
+}
+
+.section-simple {
+  width: 100%;
+}
+
+.listing-card {
+  width: 100%;
+  display: flex;
+  &__images {
+    flex: 0 0 40%;
+    background: aliceblue;
+  }
+  &__info {
+    flex-grow: 1;
+    padding: 28px 24px;
+  }
+  &__title {
+    font-size: 20px;
+  }
+}
+
+.add-listing-btn {
+  width: 100%;
+  margin-top: 32px;
+  padding: 16px;
+  color: #00abf2;
+  border-color: #00abf2;
+  border-width: 2px;
+  border-radius: 12px;
+  font-size: 16px;
+}

@@ -7,6 +7,8 @@ import { map, catchError, switchMap } from 'rxjs/operators';
 import { StorageService } from '../core/services/storage.service';
 import { mockHomes } from '../core/mockData/homes';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { log } from 'util';
+import { HouseService } from '../core/services/house.service';
 
 @Component({
   selector: 'app-house-edit',
@@ -16,7 +18,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 export class HouseEditComponent implements OnInit, OnChanges {
   houseForm: FormGroup;
   saveHouseSub: Subscription;
-  bookingUrl: '';
+  bookingUrl: '/people/2/accommodation';
   amenities  = [
     'smarttv',
     'washer',
@@ -34,29 +36,19 @@ export class HouseEditComponent implements OnInit, OnChanges {
     private http: HttpClient,
     private storageService: StorageService,
     private route: ActivatedRoute,
+    private houseService: HouseService
   ) {
     this.createForm();
    }
 
   ngOnInit() {
-    // const test = this.route.paramMap.pipe(
-    //   switchMap((params: ParamMap) => mockHomes.find(home => home.id.toString() === params.get('id'))
-    //   catch((error: any) => log.error));
-    // console.log('test', test);
-    // this.selectedHouse = mockHomes.find(home => home.id.toString() === '1');
-    // console.log(this.route.paramMap.pipe(map(params => params.keys)));
-    // this.selectedHouse = this.route.paramMap.pipe(
-    //   switchMap(params => {
-    //     return mockHomes.find(home => home.id === params.id );
-    //   })
-    // );
     if (this.selectedHouse) {
       this.populateForm();
     }
   }
 
   createForm() {
-    const newHouseId = this.storageService.getItem('homes').length + 1;
+    const newHouseId = Math.random().toString(36).substr(2, 9);
     this.houseForm = this.fb.group({
       name: ['', Validators.required],
       description: ['', Validators.required],
@@ -78,17 +70,32 @@ export class HouseEditComponent implements OnInit, OnChanges {
     });
   }
 
-  saveHouse() {
-    const formValue = {...this.houseForm.value};
-    console.log(formValue);
-    
-    this.storageService.setItem('homes', [...this.storageService.getItem('homes'), formValue]);
-    // TODO Add proper posting
-    // return this.http.post<House>(this.bookingUrl, formValue).pipe(
-    //   map(bookResponse => bookResponse),
-    //   catchError(this.handleError)
-    // );
+  onSaveHouse() {
+    // const formValue = {...this.houseForm.value};
+    const formValue = {
+      "address": "1343 Dream Big Avenue", 
+      "city": "Palo Alto", 
+      "description": "Blah blah blah", 
+      "is_available": true, 
+      "is_booked": false, 
+      "name": "Kickass Mansion", 
+      "office_id": 1, 
+       
+      "short_description": "12 en-suite Bedrooms, Jacuzzi", 
+      
+    }
+    this.houseService.addHome(2, formValue).subscribe(response => {
+      console.log(response);
+    });
   }
+  
+  // saveHouse() {
+    
+  //   return this.http.post<House>(this.bookingUrl, formValue).pipe(
+  //     map(response => response),
+  //     catchError(this.handleError)
+  //   );
+  // }
 
   onFileChanged(event) {
     // console.log('event', event);

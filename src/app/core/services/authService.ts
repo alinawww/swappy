@@ -4,7 +4,6 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { AuthResponse } from '../models/authResponse';
 import { StorageService } from './storage.service';
-import { User } from '../models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -41,11 +40,16 @@ export class AuthService {
     return this.authResponse ? true : false;
   }
 
-  getUser(): User {
+  getUser(): any {
     return this.authResponse.user;
   }
 
   private handleLoginSuccess(authResponse: AuthResponse) {
+    authResponse['user'] = {
+      firstName: 'Bastien',
+      lastName: 'Boutonnet',
+      emailAddress: 'bboutonnet@tripactions.com',
+    };
     this.authResponse = authResponse;
     this.storageService.setItem('authResponse', authResponse);
   }
